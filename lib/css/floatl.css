@@ -16,14 +16,28 @@
   padding: 17px 8px 5px 8px;
 }
 
+.floatl--active .floatl__input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.floatl--active .floatl__input::-moz-placeholder {
+  opacity: 0;
+}
+
+.floatl--active .floatl__input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.floatl--active .floatl__input::placeholder {
+  opacity: 0;
+}
+
 .floatl--active.floatl--multiline .floatl__label {
   background-color: white;
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
 .floatl__label {
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -39,11 +53,8 @@
 }
 
 .floatl__input {
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   outline: none;
   margin-top: 0;
   margin-left: 0;
@@ -51,11 +62,6 @@
   font-size: 15px;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-}
-
-.floatl__input::-moz-selection {
-  color: white;
-  background-color: #2a8dea;
 }
 
 .floatl__input::selection {

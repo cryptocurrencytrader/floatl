@@ -21,6 +21,22 @@ $active-color: hsl(209, 82%, 54%);
 
   .floatl__input {
     padding: 17px 8px 5px 8px;
+
+    &:-ms-input-placeholder{
+      opacity: 0;
+    }
+
+    &::-moz-placeholder{
+      opacity: 0;
+    }
+
+    &::-webkit-input-placeholder{
+      opacity: 0;
+    }
+
+    &::placeholder {
+      opacity: 0;
+    }
   }
 
   &.floatl--multiline .floatl__label {

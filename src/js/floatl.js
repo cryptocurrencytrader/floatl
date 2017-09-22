@@ -23,7 +23,7 @@ export default class Floatl {
       removeClass(this.element, focusedClass);
     });
 
-    for (var event of ['keyup', 'blur', 'change', 'input']) {
+    for (var event of ['focus', 'keyup', 'blur', 'change', 'input']) {
       addEventListener(this.input, event, () => this._handleChange());
     }
   }
@@ -37,7 +37,7 @@ export default class Floatl {
   }
 
   _handleChange() {
-    if (this.input.value === '') {
+    if (document.activeElement !== this.input && this.input.value === '') {
       removeClass(this.element, activeClass);
     } else {
       addClass(this.element, activeClass);
